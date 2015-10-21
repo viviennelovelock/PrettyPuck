@@ -1,0 +1,38 @@
+<form action="/nhl">
+    <input type="text" name="query" placeholder = "Search" autofocus>
+    <button>Search</button>
+</form>
+
+<% unless @league.nil? %>
+
+
+<!-- <p id='league'>
+	<b>League:</b>
+	<%= @league %>
+</p> -->
+
+<p id='conferences'>
+	<!-- <b>Conferences:</b> -->
+	<%#= @conferences %>
+	<% @conferences.each do |conference| %>
+		<h2><%= conference["name"] %></h2>
+		<% conference["divisions"].each do |division| %>
+			<h3><%= division["name"] %></h3>
+			<% division["teams"].each do |team| %>
+				<p><%= team["name"] %></p>
+			<% end %>
+		<% end %>
+	<% end %>
+</p>
+
+<p id='name'>
+	<b>Name:</b>
+	<%= @name %>
+</p>
+
+
+
+
+
+
+<% end %>
