@@ -9,15 +9,19 @@
      <link href='css/main.css' rel='stylesheet'>
 </head>
 <body>
-	
+	<div class="masthead-nav">
 	<nav>
+		<form action="/nhl">
+	    <input type="text" name="query" placeholder = "Search" autofocus>
+	    <button>Search</button>
+	    </form>
 		<a href="/home">Home</a>
 		<a href="/team">Teams</a>
 		<a href="/player">Players</a>
-		<a href="/player">Statistics</a>
-		<a href="/player">Standings</a>
+		<a href="/statistics">Statistics</a>
+		<a href="/standings">Standings</a>
 	</nav>
-
+</div>
 
 
 <%= yield %>
